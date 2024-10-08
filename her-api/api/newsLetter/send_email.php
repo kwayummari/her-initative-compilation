@@ -1,21 +1,31 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json"); // Set content type to JSON
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
 
 // Get POST data from the request
 $data = json_decode(file_get_contents('php://input'), true);
 
-if (isset($data['message']) && isset($data['to'])) {
-    $to = 'developerkwayu@gmail.com'; // Recipient's email address
+// Validate the input data
+if (isset($data['message'])) {
+    // Sample email addresses for testing
+    $sampleEmails = [
+        'developerkwayu@gmail.com',
+        'msiluandrew2020@gmail.com'
+    ];
+    
+    // You can select the first sample email for testing
+    $to = $sampleEmails[0]; // Change this to any email from the sample array for testing
     $subject = "New Message"; // Subject of the email
     $message = $data['message']; // Email message
-    $headers = "From: info@herinitiative.or.tz" . "\r\n" . // Sender's email
-               "Reply-To: info@herinitiative.or.tz" . "\r\n" . // Reply-to email
+
+    // Set the headers for the email
+    $headers = "From: info@herinitiative.or.tz\r\n" . // Sender's email
+               "Reply-To: info@herinitiative.or.tz\r\n" . // Reply-to email
                "X-Mailer: PHP/" . phpversion(); // PHP version
 
-    // Sending the email
+    // Attempt to send the email
     if (mail($to, $subject, $message, $headers)) {
         echo json_encode(['status' => 'success', 'message' => 'Email sent successfully!']);
     } else {
@@ -24,4 +34,3 @@ if (isset($data['message']) && isset($data['to'])) {
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Invalid data provided.']);
 }
-
