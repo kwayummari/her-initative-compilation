@@ -6,7 +6,7 @@ class API {
     function AddSubscriber() {
         // Database connection
         $db = new Connect;
-        $email = $_POST['email'];
+        $email = 'developerkwayu@gmail.com';
 
         // Validate the email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
