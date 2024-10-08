@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Make sure the path is correct
+require '../../vendor/autoload.php'; // Make sure the path is correct
 
 $data = json_decode(file_get_contents('php://input'), true);
 
