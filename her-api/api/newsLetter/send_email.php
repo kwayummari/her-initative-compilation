@@ -14,7 +14,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 if (isset($data['message'])) {
     $to = 'developerkwayu@gmail.com'; // Recipient's email address
     $subject = "New Message"; // Subject of the email
-    $message = $data['message']; // Email message
+    $message = 'hello this is sample message'; // Email message
 
     $mail = new PHPMailer(true);
     try {
