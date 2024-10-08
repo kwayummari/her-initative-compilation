@@ -3,9 +3,10 @@ header("Access-Control-Allow-Origin: *");
 include('../../config/db.php');
 
 class API {
-    function AddSubscriber($email) {
+    function AddSubscriber() {
         // Database connection
         $db = new Connect;
+        $email = $_POST['email'];
 
         // Validate the email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
