@@ -1,5 +1,5 @@
 <?php
-// send_email.php
+header("Access-Control-Allow-Origin: *");
 
 // Get POST data from the request
 $data = json_decode(file_get_contents('php://input'), true);
