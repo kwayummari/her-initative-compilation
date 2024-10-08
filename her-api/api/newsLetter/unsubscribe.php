@@ -23,7 +23,7 @@ class API {
 
 $API = new API();
 
-if(isset($_POST['id'])) {
+if(isset($_GET['email'])) {
     $email = intval($_GET['email']); // Ensure the ID is an integer
 
     echo $API->Delete($email);
