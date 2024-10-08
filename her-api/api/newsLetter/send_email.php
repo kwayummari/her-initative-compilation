@@ -1,6 +1,5 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -11,10 +10,11 @@ require '../../vendor/autoload.php'; // Make sure the path is correct
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-// if (isset($data['message'])) {
-    $to = 'developerkwayu@gmail.com'; // Recipient's email address
+// Check if message and recipient email are provided in the request
+if (isset($data['message']) && isset($data['to'])) {
+    $to = $data['to']; // Recipient's email address from the request
     $subject = "New Message"; // Subject of the email
-    $message = 'hello this is sample message'; // Email message
+    $message = $data['message']; // Email message from the request
 
     $mail = new PHPMailer(true);
     try {
@@ -29,7 +29,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 
         // Recipients
         $mail->setFrom('newsletter@herinitiative.or.tz', 'Her Initiative');
-        $mail->addAddress($to); // Add a recipient
+        $mail->addAddress($to); // Add the recipient's email from the request
 
         // Content
         $mail->isHTML(true); // Set email format to HTML
@@ -42,6 +42,6 @@ $data = json_decode(file_get_contents('php://input'), true);
     } catch (Exception $e) {
         echo json_encode(['status' => 'error', 'message' => 'Failed to send email. Mailer Error: ' . $mail->ErrorInfo]);
     }
-// } else {
-//     echo json_encode(['status' => 'error', 'message' => 'Message field is required.']);
-// }
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Message and recipient email are required.']);
+}
