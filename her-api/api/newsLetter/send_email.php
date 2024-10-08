@@ -16,7 +16,7 @@ if (isset($data['message']) && isset($data['to'])) {
     if (mail($to, $subject, $message, $headers)) {
         echo json_encode(['status' => 'success', 'message' => 'Email sent successfully!']);
     } else {
-        echo json_encode(['status' => 'error', 'message' => `Failed to send to $to.`]);
+        echo json_encode(['status' => 'error', 'message' => `Failed to send email`]);
     }
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Invalid data provided.']);
