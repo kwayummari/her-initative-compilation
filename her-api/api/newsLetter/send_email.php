@@ -8,8 +8,8 @@ if (isset($data['message']) && isset($data['to'])) {
     $to = $data['to']; // Recipient's email address
     $subject = "New Message"; // Subject of the email
     $message = $data['message']; // Email message
-    $headers = "From: info@herinitiative.or.tz" . "\r\n" . // Sender's email
-               "Reply-To: info@herinitiative.or.tz" . "\r\n" . // Reply-to email
+    $headers = "From: developerkwayu@gmail.com" . "\r\n" . // Sender's email
+               "Reply-To: developerkwayu@gmail.com" . "\r\n" . // Reply-to email
                "X-Mailer: PHP/" . phpversion(); // PHP version
 
     // Sending the email
@@ -21,4 +21,3 @@ if (isset($data['message']) && isset($data['to'])) {
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Invalid data provided.']);
 }
-?>
