@@ -1,33 +1,47 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json"); // Set content type to JSON
+header("Content-Type: application/json");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Get POST data from the request
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php'; // Make sure the path is correct
+
 $data = json_decode(file_get_contents('php://input'), true);
 
-// Validate the input data
-    // Sample email addresses for testing
-    $sampleEmails = [
-        'developerkwayu@gmail.com',
-        'msiluandrew2020@gmail.com'
-    ];
-    
-    // You can select the first sample email for testing
-    $to = $sampleEmails[0]; // Change this to any email from the sample array for testing
+if (isset($data['message'])) {
+    $to = 'developerkwayu@gmail.com'; // Recipient's email address
     $subject = "New Message"; // Subject of the email
-    $message = "Hello, this is a test message."; // Email message
+    $message = $data['message']; // Email message
 
-    // Set the headers for the email
-    $headers = "From: newsletter@herinitiative.or.tz\r\n" . // Sender's email
-               "Reply-To: newsletter@herinitiative.or.tz\r\n" . // Reply-to email
-               "X-Mailer: PHP/" . phpversion(); // PHP version
+    $mail = new PHPMailer(true);
+    try {
+        // Server settings
+        $mail->isSMTP(); // Set mailer to use SMTP
+        $mail->Host = 'smtp.titan.email'; // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true; // Enable SMTP authentication
+        $mail->Username = 'newsletter@herinitiative.or.tz'; // SMTP username
+        $mail->Password = 'Gudboy24@'; // SMTP password
+        $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587; // TCP port to connect to
 
-    // Attempt to send the email
-    if (mail($to, $subject, $message, $headers)) {
+        // Recipients
+        $mail->setFrom('newsletter@herinitiative.or.tz', 'Her Initiative');
+        $mail->addAddress($to); // Add a recipient
+
+        // Content
+        $mail->isHTML(true); // Set email format to HTML
+        $mail->Subject = $subject;
+        $mail->Body    = nl2br($message); // Convert new lines to HTML line breaks
+
+        // Send the email
+        $mail->send();
         echo json_encode(['status' => 'success', 'message' => 'Email sent successfully!']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Failed to send email']);
+    } catch (Exception $e) {
+        echo json_encode(['status' => 'error', 'message' => 'Failed to send email. Mailer Error: ' . $mail->ErrorInfo]);
     }
-
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Message field is required.']);
+}
