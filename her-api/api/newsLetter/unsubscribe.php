@@ -81,8 +81,8 @@ class API {
             <div class="container">
                 <h1>You\'ve Unsubscribed</h1>
                 <p>We\'re sorry to see you go! You\'ve successfully unsubscribed from our newsletter using the email <strong>' . htmlspecialchars($email) . '</strong>. You will no longer receive updates and promotions from us.</p>
-                <p>If this was a mistake, feel free to <a href="https://herinitiative.or.tz/subscribe">subscribe again</a> anytime. We\'re always happy to have you!</p>
-                <a class="subscribe-again" href="https://herinitiative.or.tz/subscribe">Subscribe Again</a>
+                <p>If this was a mistake, feel free to <a href="https://herinitiative.or.tz">subscribe again</a> anytime. We\'re always happy to have you!</p>
+                <a class="subscribe-again" href="https://herinitiative.or.tz">Subscribe Again</a>
             </div>
         </body>
         </html>';
