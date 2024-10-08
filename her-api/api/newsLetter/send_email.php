@@ -20,8 +20,8 @@ $data = json_decode(file_get_contents('php://input'), true);
     $message = "Hello, this is a test message."; // Email message
 
     // Set the headers for the email
-    $headers = "From: info@herinitiative.or.tz\r\n" . // Sender's email
-               "Reply-To: info@herinitiative.or.tz\r\n" . // Reply-to email
+    $headers = "From: newsletter@herinitiative.or.tz\r\n" . // Sender's email
+               "Reply-To: newsletter@herinitiative.or.tz\r\n" . // Reply-to email
                "X-Mailer: PHP/" . phpversion(); // PHP version
 
     // Attempt to send the email
