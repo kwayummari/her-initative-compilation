@@ -1,5 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -91,7 +92,7 @@ if (isset($data['message']) && isset($data['to'])) {
                 <p>Best regards,<br>The Her Initiative Team</p>
                 <div class="footer">
                     <p>© ' . date("Y") . ' Her Initiative. All rights reserved.</p>
-                    <p><a href="[Unsubscribe Link]">Unsubscribe</a> | <a href="[Contact Us Link]">Contact Us</a></p>
+                    <p><a href="https://herinitiative.or.tz/her-api/api/newsLetter/unsubscribe.php?email=' . urlencode($to) . '">Unsubscribe</a> | <a href="[Contact Us Link]">Contact Us</a></p>
                 </div>
             </div>
         </body>
