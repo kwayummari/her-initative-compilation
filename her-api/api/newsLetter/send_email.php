@@ -11,7 +11,7 @@ require '../../vendor/autoload.php'; // Make sure the path is correct
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-if (isset($data['message'])) {
+// if (isset($data['message'])) {
     $to = 'developerkwayu@gmail.com'; // Recipient's email address
     $subject = "New Message"; // Subject of the email
     $message = 'hello this is sample message'; // Email message
@@ -42,6 +42,6 @@ if (isset($data['message'])) {
     } catch (Exception $e) {
         echo json_encode(['status' => 'error', 'message' => 'Failed to send email. Mailer Error: ' . $mail->ErrorInfo]);
     }
-} else {
-    echo json_encode(['status' => 'error', 'message' => 'Message field is required.']);
-}
+// } else {
+//     echo json_encode(['status' => 'error', 'message' => 'Message field is required.']);
+// }
