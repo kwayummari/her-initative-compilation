@@ -3,10 +3,9 @@ header("Access-Control-Allow-Origin: *");
 include('../../config/db.php');
 
 class API {
-    function AddSubscriber() {
+    function AddSubscriber($email) {
         // Database connection
         $db = new Connect;
-        $email = 'developerkwayu@gmail.com';
 
         // Validate the email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -44,4 +43,3 @@ if (isset($_POST['email'])) {
     // If email is not set, return an error message
     echo json_encode(array("message" => "Email not provided."));
 }
-?>
