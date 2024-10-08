@@ -92,7 +92,7 @@ if (isset($data['message']) && isset($data['to'])) {
                 <p>Best regards,<br>The Her Initiative Team</p>
                 <div class="footer">
                     <p>© ' . date("Y") . ' Her Initiative. All rights reserved.</p>
-                    <p><a href="https://herinitiative.or.tz/her-api/api/newsLetter/unsubscribe.php?email=' . urlencode($to) . '">Unsubscribe</a> | <a href="[Contact Us Link]">Contact Us</a></p>
+                    <p><a href="https://herinitiative.or.tz/her-api/api/newsLetter/unsubscribe.php?email=' . urlencode($to) . '">Unsubscribe</a> | <a href="tel:+255734283347">Contact Us</a></p>
                 </div>
             </div>
         </body>
