@@ -8,7 +8,6 @@ ini_set('display_errors', 1);
 $data = json_decode(file_get_contents('php://input'), true);
 
 // Validate the input data
-if (isset($data['message'])) {
     // Sample email addresses for testing
     $sampleEmails = [
         'developerkwayu@gmail.com',
@@ -18,7 +17,7 @@ if (isset($data['message'])) {
     // You can select the first sample email for testing
     $to = $sampleEmails[0]; // Change this to any email from the sample array for testing
     $subject = "New Message"; // Subject of the email
-    $message = $data['message']; // Email message
+    $message = "Hello, this is a test message."; // Email message
 
     // Set the headers for the email
     $headers = "From: info@herinitiative.or.tz\r\n" . // Sender's email
@@ -31,6 +30,4 @@ if (isset($data['message'])) {
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Failed to send email']);
     }
-} else {
-    echo json_encode(['status' => 'error', 'message' => 'Invalid data provided.']);
-}
+
