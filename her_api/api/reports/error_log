@@ -1,0 +1,33 @@
+[07-Apr-2024 11:55:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/herinit/public_html/her-api/config/db.php:6
+Stack trace:
+#0 /home1/herinit/public_html/her-api/config/db.php(6): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/herinit/public_html/her-api/api/reports/get_reports.php(7): Connect->__construct()
+#2 /home1/herinit/public_html/her-api/api/reports/get_reports.php(26): API->Select()
+#3 {main}
+  thrown in /home1/herinit/public_html/her-api/config/db.php on line 6
+[07-Apr-2024 11:55:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/herinit/public_html/her-api/config/db.php:6
+Stack trace:
+#0 /home1/herinit/public_html/her-api/config/db.php(6): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/herinit/public_html/her-api/api/reports/get_reports.php(7): Connect->__construct()
+#2 /home1/herinit/public_html/her-api/api/reports/get_reports.php(26): API->Select()
+#3 {main}
+  thrown in /home1/herinit/public_html/her-api/config/db.php on line 6
+[07-Apr-2024 11:55:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/herinit/public_html/her-api/config/db.php:6
+Stack trace:
+#0 /home1/herinit/public_html/her-api/config/db.php(6): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/herinit/public_html/her-api/api/reports/get_reports.php(7): Connect->__construct()
+#2 /home1/herinit/public_html/her-api/api/reports/get_reports.php(26): API->Select()
+#3 {main}
+  thrown in /home1/herinit/public_html/her-api/config/db.php on line 6
+[23-May-2024 06:47:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id DESC' at line 1 in /home1/herinit/public_html/her-api/api/reports/get_reports.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/reports/get_reports.php(10): PDO->prepare('SELECT * FROM r...')
+#1 /home1/herinit/public_html/her-api/api/reports/get_reports.php(26): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/reports/get_reports.php on line 10
+[23-May-2024 06:47:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id DESC' at line 1 in /home1/herinit/public_html/her-api/api/reports/get_reports.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/reports/get_reports.php(10): PDO->prepare('SELECT * FROM r...')
+#1 /home1/herinit/public_html/her-api/api/reports/get_reports.php(26): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/reports/get_reports.php on line 10

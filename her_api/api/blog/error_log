@@ -1,0 +1,60 @@
+[15-Apr-2024 06:59:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method API::Select() in /home1/herinit/public_html/her-api/api/blog/add_blog.php:71
+Stack trace:
+#0 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/add_blog.php on line 71
+[15-Apr-2024 06:59:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method API::Select() in /home1/herinit/public_html/her-api/api/blog/add_blog.php:71
+Stack trace:
+#0 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/add_blog.php on line 71
+[15-Apr-2024 23:11:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:11:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:11:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:11:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:13:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:13:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:13:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[15-Apr-2024 23:13:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1' in 'where clause' in /home1/herinit/public_html/her-api/api/blog/get_stories.php:10
+Stack trace:
+#0 /home1/herinit/public_html/her-api/api/blog/get_stories.php(10): PDO->prepare('SELECT * FROM b...')
+#1 /home1/herinit/public_html/her-api/api/blog/get_stories.php(27): API->Select()
+#2 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/get_stories.php on line 10
+[05-Jun-2024 08:44:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method API::Select() in /home1/herinit/public_html/her-api/api/blog/add_blog.php:71
+Stack trace:
+#0 {main}
+  thrown in /home1/herinit/public_html/her-api/api/blog/add_blog.php on line 71
