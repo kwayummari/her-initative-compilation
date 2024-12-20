@@ -14,9 +14,9 @@ class API{
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         // Check if file already exists
-        if (file_exists($target_file)) {
-            return json_encode(array("message" => "Image file already exists."));
-        }
+        // if (file_exists($target_file)) {
+        //     return json_encode(array("message" => "Image file already exists."));
+        // }
 
         // Check file size
         if ($image["size"] > 5000000) { // Adjust the size limit according to your needs
